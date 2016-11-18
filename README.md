@@ -1,0 +1,2 @@
+# RollingGirl
+RollingGirl是一个2d的像素游戏，旨在通过一击必杀的联机战斗来展现女孩子们的可爱之处
