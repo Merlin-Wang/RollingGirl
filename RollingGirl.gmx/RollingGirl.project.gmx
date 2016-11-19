@@ -48,6 +48,8 @@
     <object>objects\obj_scene_base</object>
     <object>objects\obj_scene_static</object>
     <object>objects\obj_scene_dynamic</object>
+    <object>objects\obj_ysera_magic_bullet</object>
+    <object>objects\obj_ysera_skill_effect</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
