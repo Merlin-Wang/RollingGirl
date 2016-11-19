@@ -107,3 +107,4 @@ if(sprite_index == spr_ysera_skill){
         m_fired = true
     }
 }
+

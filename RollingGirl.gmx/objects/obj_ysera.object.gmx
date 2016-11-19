@@ -95,14 +95,7 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(m_isAttacking &amp;&amp; sprite_index == spr_ysera_attack_side
-    || sprite_index == spr_ysera_attack_front
-    || sprite_index == spr_ysera_attack_back){
-    m_isAttacking = false;
-}
-if(m_isInSkill &amp;&amp; sprite_index == spr_ysera_skill){
-    m_isInSkill = false;
-}
+            <string>YseraAniEnd();
 </string>
           </argument>
         </arguments>

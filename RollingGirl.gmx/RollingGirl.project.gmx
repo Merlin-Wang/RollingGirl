@@ -17,6 +17,14 @@
       <sprite>sprites\spr_ysera_skill</sprite>
       <sprite>sprites\spr_ysera_magic_bullet</sprite>
       <sprite>sprites\spr_ysera_skill_effect</sprite>
+      <sprites name="devil">
+        <sprite>sprites\spr_devil_die</sprite>
+        <sprite>sprites\spr_devil_attack</sprite>
+        <sprite>sprites\spr_devil_walk</sprite>
+        <sprite>sprites\spr_devil_idle</sprite>
+        <sprite>sprites\spr_devil_attack_area</sprite>
+      </sprites>
+      <sprite>sprites\spr_hitbox</sprite>
     </sprites>
     <sprites name="StaticObject">
       <sprite>sprites\spr_statue</sprite>
@@ -35,10 +43,21 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\YseraStep.gml</script>
+    <script>scripts\DevilStep.gml</script>
     <script>scripts\YseraCreate.gml</script>
+    <script>scripts\DevilCreate.gml</script>
+    <script>scripts\YseraAniEnd.gml</script>
+    <script>scripts\DevilAniEnd.gml</script>
+    <script>scripts\DevilOnDamage.gml</script>
+    <script>scripts\HitboxOnDamage.gml</script>
+    <script>scripts\DevilUpdateFollow.gml</script>
+    <script>scripts\DevilUpdateDash.gml</script>
+    <script>scripts\DevilUpdateAttack.gml</script>
+    <script>scripts\DevilUpdateRetreat.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_ysera</object>
+    <object>objects\obj_devil</object>
     <object>objects\obj_statue</object>
     <object>objects\obj_barrel</object>
     <object>objects\obj_wall</object>
@@ -50,6 +69,8 @@
     <object>objects\obj_scene_dynamic</object>
     <object>objects\obj_ysera_magic_bullet</object>
     <object>objects\obj_ysera_skill_effect</object>
+    <object>objects\obj_devil_attack_area</object>
+    <object>objects\obj_hitbox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
