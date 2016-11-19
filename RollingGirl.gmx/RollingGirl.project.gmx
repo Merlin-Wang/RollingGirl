@@ -11,6 +11,12 @@
       <sprite>sprites\spr_ysera_walk_front</sprite>
       <sprite>sprites\spr_ysera_walk_side</sprite>
       <sprite>sprites\spr_ysera_walk_back</sprite>
+      <sprite>sprites\spr_ysera_attack_front</sprite>
+      <sprite>sprites\spr_ysera_attack_back</sprite>
+      <sprite>sprites\spr_ysera_attack_side</sprite>
+      <sprite>sprites\spr_ysera_skill</sprite>
+      <sprite>sprites\spr_ysera_magic_bullet</sprite>
+      <sprite>sprites\spr_ysera_skill_effect</sprite>
     </sprites>
     <sprites name="StaticObject">
       <sprite>sprites\spr_statue</sprite>
@@ -29,6 +35,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\YseraStep.gml</script>
+    <script>scripts\YseraCreate.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_ysera</object>
@@ -38,6 +45,9 @@
     <object>objects\obj_grass</object>
     <object>objects\obj_light</object>
     <object>objects\obj_pool</object>
+    <object>objects\obj_scene_base</object>
+    <object>objects\obj_scene_static</object>
+    <object>objects\obj_scene_dynamic</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
