@@ -6,15 +6,38 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_ysera_idle</sprite>
-    <sprite>sprites\spr_ysera_walk_front</sprite>
-    <sprite>sprites\spr_ysera_walk_back</sprite>
-    <sprite>sprites\spr_ysera_walk_side</sprite>
+    <sprites name="Character">
+      <sprite>sprites\spr_ysera_idle</sprite>
+      <sprite>sprites\spr_ysera_walk_front</sprite>
+      <sprite>sprites\spr_ysera_walk_side</sprite>
+      <sprite>sprites\spr_ysera_walk_back</sprite>
+    </sprites>
+    <sprites name="StaticObject">
+      <sprite>sprites\spr_statue</sprite>
+      <sprite>sprites\spr_barrel</sprite>
+      <sprite>sprites\spr_wall</sprite>
+    </sprites>
+    <sprites name="DynamicObject">
+      <sprite>sprites\spr_grass</sprite>
+      <sprite>sprites\spr_light</sprite>
+      <sprite>sprites\spr_pool</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bk_cave</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\YseraStep.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_ysera</object>
+    <object>objects\obj_statue</object>
+    <object>objects\obj_barrel</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_grass</object>
+    <object>objects\obj_light</object>
+    <object>objects\obj_pool</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
