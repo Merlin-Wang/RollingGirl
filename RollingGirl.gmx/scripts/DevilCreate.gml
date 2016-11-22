@@ -7,7 +7,7 @@ m_fired = false;
 var deltaX = 0;
 var deltaY = 0;
 
-m_attachedHitbox = instance_create(x, y, obj_hitbox);
+m_attachedHitbox = instance_create(x, y, obj_devil_hitbox);
 m_attachedHitbox.m_attachedParent = id;//创建碰撞盒
 
 m_hp = 1;

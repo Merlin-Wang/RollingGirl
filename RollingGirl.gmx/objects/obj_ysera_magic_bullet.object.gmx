@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_scene_bullet</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -56,7 +56,7 @@ phy_position_y = phy_position_y + m_speedY;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_hitbox">
+    <event eventtype="4" ename="obj_devil_hitbox">
       <action>
         <libid>1</libid>
         <id>603</id>

@@ -7,24 +7,26 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Character">
-      <sprite>sprites\spr_ysera_idle</sprite>
-      <sprite>sprites\spr_ysera_walk_front</sprite>
-      <sprite>sprites\spr_ysera_walk_side</sprite>
-      <sprite>sprites\spr_ysera_walk_back</sprite>
-      <sprite>sprites\spr_ysera_attack_front</sprite>
-      <sprite>sprites\spr_ysera_attack_back</sprite>
-      <sprite>sprites\spr_ysera_attack_side</sprite>
-      <sprite>sprites\spr_ysera_skill</sprite>
-      <sprite>sprites\spr_ysera_magic_bullet</sprite>
-      <sprite>sprites\spr_ysera_skill_effect</sprite>
-      <sprites name="devil">
+      <sprites name="Ysera">
+        <sprite>sprites\spr_ysera_idle</sprite>
+        <sprite>sprites\spr_ysera_attack_front</sprite>
+        <sprite>sprites\spr_ysera_magic_bullet</sprite>
+        <sprite>sprites\spr_ysera_skill</sprite>
+        <sprite>sprites\spr_ysera_attack_back</sprite>
+        <sprite>sprites\spr_ysera_skill_effect</sprite>
+        <sprite>sprites\spr_ysera_attack_side</sprite>
+        <sprite>sprites\spr_ysera_walk_back</sprite>
+        <sprite>sprites\spr_ysera_walk_front</sprite>
+        <sprite>sprites\spr_ysera_walk_side</sprite>
+      </sprites>
+      <sprites name="Devil">
         <sprite>sprites\spr_devil_die</sprite>
         <sprite>sprites\spr_devil_attack</sprite>
         <sprite>sprites\spr_devil_walk</sprite>
         <sprite>sprites\spr_devil_idle</sprite>
+        <sprite>sprites\spr_devil_hitbox</sprite>
         <sprite>sprites\spr_devil_attack_area</sprite>
       </sprites>
-      <sprite>sprites\spr_hitbox</sprite>
     </sprites>
     <sprites name="StaticObject">
       <sprite>sprites\spr_statue</sprite>
@@ -42,38 +44,63 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\YseraStep.gml</script>
-    <script>scripts\DevilStep.gml</script>
-    <script>scripts\YseraCreate.gml</script>
-    <script>scripts\DevilCreate.gml</script>
-    <script>scripts\YseraAniEnd.gml</script>
-    <script>scripts\DevilAniEnd.gml</script>
-    <script>scripts\DevilOnDamage.gml</script>
-    <script>scripts\HitboxOnDamage.gml</script>
-    <script>scripts\DevilUpdateFollow.gml</script>
-    <script>scripts\DevilUpdateDash.gml</script>
-    <script>scripts\DevilUpdateAttack.gml</script>
-    <script>scripts\DevilUpdateRetreat.gml</script>
+    <scripts name="Hitbox">
+      <script>scripts\HitboxOnDamage.gml</script>
+    </scripts>
+    <scripts name="Ysera">
+      <script>scripts\YseraCreate.gml</script>
+      <script>scripts\YseraStep.gml</script>
+      <script>scripts\YseraAniEnd.gml</script>
+    </scripts>
+    <scripts name="Devil">
+      <script>scripts\DevilUpdateRetreat.gml</script>
+      <script>scripts\DevilUpdateDash.gml</script>
+      <script>scripts\DevilOnDamage.gml</script>
+      <script>scripts\DevilCreate.gml</script>
+      <script>scripts\DevilAniEnd.gml</script>
+      <script>scripts\DevilStep.gml</script>
+      <script>scripts\DevilUpdateAttack.gml</script>
+      <script>scripts\DevilUpdateFollow.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_ysera</object>
-    <object>objects\obj_devil</object>
-    <object>objects\obj_statue</object>
-    <object>objects\obj_barrel</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_grass</object>
-    <object>objects\obj_light</object>
-    <object>objects\obj_pool</object>
     <object>objects\obj_scene_base</object>
     <object>objects\obj_scene_static</object>
     <object>objects\obj_scene_dynamic</object>
-    <object>objects\obj_ysera_magic_bullet</object>
-    <object>objects\obj_ysera_skill_effect</object>
-    <object>objects\obj_devil_attack_area</object>
-    <object>objects\obj_hitbox</object>
+    <object>objects\obj_scene_activeres</object>
+    <object>objects\obj_scene_fighters</object>
+    <object>objects\obj_scene_trap</object>
+    <object>objects\obj_scene_item</object>
+    <object>objects\obj_scene_hitbox</object>
+    <object>objects\obj_scene_bullet</object>
+    <object>objects\obj_scene_director</object>
+    <objects name="Devil">
+      <object>objects\obj_devil</object>
+    </objects>
+    <objects name="Ysera">
+      <object>objects\obj_ysera_skill_effect</object>
+      <object>objects\obj_ysera</object>
+    </objects>
+    <objects name="ActiveRes">
+      <object>objects\obj_barrel</object>
+    </objects>
+    <objects name="Static">
+      <object>objects\obj_statue</object>
+      <object>objects\obj_pool</object>
+      <object>objects\obj_grass</object>
+      <object>objects\obj_light</object>
+      <object>objects\obj_wall</object>
+    </objects>
+    <objects name="Bullet">
+      <object>objects\obj_ysera_magic_bullet</object>
+    </objects>
+    <objects name="Hitbox">
+      <object>objects\obj_devil_attack_area</object>
+      <object>objects\obj_devil_hitbox</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\room_battle</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
