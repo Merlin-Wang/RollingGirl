@@ -68,20 +68,21 @@ if(sprite_index == spr_ysera_attack_side
 || sprite_index == spr_ysera_attack_back){
     if(image_index > 2 && m_fired == false){
          var magicBullet = instance_create(x, y, obj_ysera_magic_bullet);
+         magicBullet.shooter = id;
         var deltaX = 0;
         var deltaY = 0;
         switch(m_playerDirection){
         case PlayerDirection.UP:
           magicBullet.m_speedY = -10;
           deltaY = -89;
-          deltaX = -15;
+          deltaX = 0;
           magicBullet.image_angle = 270;
           break;
         case PlayerDirection.DOWN:
           magicBullet.m_speedY = 10;
           magicBullet.image_angle = 90;
           deltaY = 7;
-          deltaX = 15;
+          deltaX = 0;
           break;
         case PlayerDirection.LEFT:
           magicBullet.m_speedX = -10;
@@ -92,18 +93,19 @@ if(sprite_index == spr_ysera_attack_side
           magicBullet.m_speedX = 10;
           magicBullet.image_angle = 180;
           deltaX = 65;
-          deltaY = -60;
+          deltaY = -33;
           break;
         } 
-        magicBullet.x += deltaX;
-        magicBullet.y += deltaY;
+        magicBullet.phy_position_x += deltaX;
+        magicBullet.phy_position_y += deltaY;
         m_fired = true;
     }
 }
 
 if(sprite_index == spr_ysera_skill){
     if(image_index > 2 && m_fired == false){
-        instance_create(x, y, obj_ysera_skill_effect);
+        m_skill=instance_create(x, y, obj_ysera_skill_effect);
+        m_skill.shooter = id;
         m_fired = true
     }
 }

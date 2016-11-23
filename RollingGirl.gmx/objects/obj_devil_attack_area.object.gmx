@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_scene_hitbox</parentName>
+  <parentName>obj_scene_skill</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 10;
+            <string>event_inherited();
+alarm[0] = 10;
 </string>
           </argument>
         </arguments>

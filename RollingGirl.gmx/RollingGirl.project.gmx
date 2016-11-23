@@ -55,13 +55,14 @@
     <scripts name="Devil">
       <script>scripts\DevilUpdateRetreat.gml</script>
       <script>scripts\DevilUpdateDash.gml</script>
-      <script>scripts\DevilOnDamage.gml</script>
       <script>scripts\DevilCreate.gml</script>
       <script>scripts\DevilAniEnd.gml</script>
       <script>scripts\DevilStep.gml</script>
       <script>scripts\DevilUpdateAttack.gml</script>
       <script>scripts\DevilUpdateFollow.gml</script>
     </scripts>
+    <script>scripts\OnDamage.gml</script>
+    <script>scripts\FighterCreate.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_scene_base</object>
@@ -74,8 +75,10 @@
     <object>objects\obj_scene_hitbox</object>
     <object>objects\obj_scene_bullet</object>
     <object>objects\obj_scene_director</object>
+    <object>objects\obj_scene_skill</object>
     <objects name="Devil">
       <object>objects\obj_devil</object>
+      <object>objects\obj_devil_attack_area</object>
     </objects>
     <objects name="Ysera">
       <object>objects\obj_ysera_skill_effect</object>
@@ -95,8 +98,8 @@
       <object>objects\obj_ysera_magic_bullet</object>
     </objects>
     <objects name="Hitbox">
-      <object>objects\obj_devil_attack_area</object>
       <object>objects\obj_devil_hitbox</object>
+      <object>objects\obj_ysera_hitbox</object>
     </objects>
   </objects>
   <rooms name="rooms">

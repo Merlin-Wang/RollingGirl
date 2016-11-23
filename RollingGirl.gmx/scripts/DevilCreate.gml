@@ -1,3 +1,4 @@
+event_inherited();
 phy_fixed_rotation = 1;
 
 
@@ -7,11 +8,6 @@ m_fired = false;
 var deltaX = 0;
 var deltaY = 0;
 
-m_attachedHitbox = instance_create(x, y, obj_devil_hitbox);
-m_attachedHitbox.m_attachedParent = id;//创建碰撞盒
-
-m_hp = 1;
-m_isDead = false;
 
 enum DevilState{
     DEVIL_FOLLOW,    //追踪
@@ -34,3 +30,6 @@ m_retreatTime = 2;
 m_retreatSpeed = 2; 
 
 obj_character_bullet = obj_devil_attack_area; 
+
+m_attachedHitbox = instance_create(x, y, obj_devil_hitbox);
+m_attachedHitbox.father = id;//创建碰撞盒
