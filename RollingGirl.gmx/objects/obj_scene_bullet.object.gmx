@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>shooter = noone;//声明变量
+            <string>phy_fixed_rotation = true; //不旋转
+shooter = noone;//声明变量
+effect = 1; //效果，1代表伤害
 </string>
           </argument>
         </arguments>

@@ -1,5 +1,17 @@
 image_speed = 0.25  //调整动画速度
 
+if(m_isDead)  //死亡则退出
+    return 0;
+    
+if(m_hp == 0){   //死了播死亡动画
+    m_isDead = true;
+    sprite_index = spr_devil_die;
+    return 0;
+}
+
+if(m_playerid>0)//人手操
+{
+
 if(m_isAttacking == false && m_isInSkill == false)
 {
 if(keyboard_check(ord('A')))
@@ -7,40 +19,40 @@ if(keyboard_check(ord('A')))
     phy_position_x = phy_position_x - 8;
     sprite_index = spr_ysera_walk_side;
     image_xscale = 1;
-    m_playerDirection = PlayerDirection.LEFT;
+    m_playerDirection = FighterDirection.LEFT;
 }
 else if(keyboard_check(ord('D')))
 {
     phy_position_x = phy_position_x + 8;
     sprite_index = spr_ysera_walk_side;    
     image_xscale = -1;
-    m_playerDirection = PlayerDirection.RIGHT;
+    m_playerDirection = FighterDirection.RIGHT;
 }
 else if(keyboard_check(ord('W')))
 {
     phy_position_y = phy_position_y - 8;
     sprite_index = spr_ysera_walk_back;    
-    m_playerDirection = PlayerDirection.UP;
+    m_playerDirection = FighterDirection.UP;
 }
 else if(keyboard_check(ord('S')))
 {
     phy_position_y = phy_position_y + 8;
     sprite_index = spr_ysera_walk_front;
-    m_playerDirection = PlayerDirection.DOWN;
+    m_playerDirection = FighterDirection.DOWN;
 }
 else if(keyboard_check(ord('J'))){
   switch(m_playerDirection)
   {
-  case PlayerDirection.UP:
+  case FighterDirection.UP:
     sprite_index = spr_ysera_attack_back;
     break;
-  case PlayerDirection.DOWN:
+  case FighterDirection.DOWN:
     sprite_index = spr_ysera_attack_front;
     break;
-  case PlayerDirection.LEFT:
+  case FighterDirection.LEFT:
     sprite_index = spr_ysera_attack_side;
     break;
-  case PlayerDirection.RIGHT:
+  case FighterDirection.RIGHT:
     sprite_index = spr_ysera_attack_side;
     break;
   }
@@ -59,10 +71,16 @@ else
     sprite_index = spr_ysera_idle;
 }
 }
+}
+
+else
+{
+//状态机代码
+
+}
 
 
-
-
+//技能1
 if(sprite_index == spr_ysera_attack_side
 || sprite_index == spr_ysera_attack_front
 || sprite_index == spr_ysera_attack_back){
@@ -72,24 +90,24 @@ if(sprite_index == spr_ysera_attack_side
         var deltaX = 0;
         var deltaY = 0;
         switch(m_playerDirection){
-        case PlayerDirection.UP:
+        case FighterDirection.UP:
           magicBullet.m_speedY = -10;
           deltaY = -89;
           deltaX = 0;
           magicBullet.image_angle = 270;
           break;
-        case PlayerDirection.DOWN:
+        case FighterDirection.DOWN:
           magicBullet.m_speedY = 10;
           magicBullet.image_angle = 90;
           deltaY = 7;
           deltaX = 0;
           break;
-        case PlayerDirection.LEFT:
+        case FighterDirection.LEFT:
           magicBullet.m_speedX = -10;
           deltaX = -65;
           deltaY = -33;
           break;
-        case PlayerDirection.RIGHT:
+        case FighterDirection.RIGHT:
           magicBullet.m_speedX = 10;
           magicBullet.image_angle = 180;
           deltaX = 65;
@@ -101,7 +119,7 @@ if(sprite_index == spr_ysera_attack_side
         m_fired = true;
     }
 }
-
+//技能2
 if(sprite_index == spr_ysera_skill){
     if(image_index > 2 && m_fired == false){
         m_skill=instance_create(x, y, obj_ysera_skill_effect);

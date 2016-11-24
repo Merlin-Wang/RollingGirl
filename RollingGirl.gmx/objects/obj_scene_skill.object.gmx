@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>shooter = noone;
+effect = 1; //效果，1代表伤害
 </string>
           </argument>
         </arguments>

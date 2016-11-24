@@ -1,15 +1,7 @@
 event_inherited();
-phy_fixed_rotation = 1;
 
 
-m_isAttacking = false;
-m_isInSkill = false;
-m_fired = false;
-var deltaX = 0;
-var deltaY = 0;
-
-
-enum DevilState{
+enum DevilState{   //设置状态机
     DEVIL_FOLLOW,    //追踪
     DEVIL_DASH,    //冲刺
     DEVIL_ATTACK,    //攻击
@@ -29,7 +21,7 @@ m_retreatCurrentTime = 0;
 m_retreatTime = 2;    
 m_retreatSpeed = 2; 
 
-obj_character_bullet = obj_devil_attack_area; 
+obj_character_bullet = obj_devil_attack_area;   //设置技能判定
 
 m_attachedHitbox = instance_create(x, y, obj_devil_hitbox);
-m_attachedHitbox.father = id;//创建碰撞盒
+m_attachedHitbox.father = id;//自身判定
