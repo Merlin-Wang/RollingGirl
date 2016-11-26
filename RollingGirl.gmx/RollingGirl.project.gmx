@@ -19,6 +19,7 @@
         <sprite>sprites\spr_ysera_walk_front</sprite>
         <sprite>sprites\spr_ysera_walk_side</sprite>
         <sprite>sprites\spr_ysera_ultimate</sprite>
+        <sprite>sprites\spr_ysera_ultimate_bullet</sprite>
       </sprites>
       <sprites name="Devil">
         <sprite>sprites\spr_devil_die</sprite>
@@ -101,6 +102,7 @@
       <object>objects\obj_wall</object>
     </objects>
     <objects name="Bullet">
+      <object>objects\obj_ysera_ultimate_bullet</object>
       <object>objects\obj_ysera_magic_bullet</object>
     </objects>
     <objects name="Hitbox">

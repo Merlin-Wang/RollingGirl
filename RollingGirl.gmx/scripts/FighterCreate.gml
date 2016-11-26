@@ -16,10 +16,11 @@ enum FighterDirection{
     DOWNLEFT
 }
 m_playerDirection = FighterDirection.DOWN; //给键盘用的八方向
-m_fullDirection = 0;  //全方向
+m_fullDirection = 270;  //全方向
 
 m_isAttacking = false;
 m_isInSkill = false;
+m_isInUltimate = false;
 m_fired = false;
 var deltaX = 0;
 var deltaY = 0;

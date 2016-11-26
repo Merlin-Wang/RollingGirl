@@ -1,4 +1,4 @@
-if(m_isAttacking == false && m_isInSkill == false)
+if(m_isAttacking == false && m_isInSkill == false && m_isInUltimate == false)
 {
 //m_speed2 = m_speed/1.414;
 walkspeed = m_speed;
@@ -99,7 +99,7 @@ else if(keyboard_check(ord('K'))){
 else if(keyboard_check(ord('L'))){
     sprite_index = spr_ysera_ultimate;
     image_index = 0;
-    m_isInSkill = true;
+    m_isInUltimate = true;
     m_fired = false;
 }
 
