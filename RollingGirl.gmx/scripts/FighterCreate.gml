@@ -9,9 +9,14 @@ enum FighterDirection{
     UP,
     DOWN,
     LEFT,
-    RIGHT
+    RIGHT,
+    UPRIGHT,
+    DOWNRIGHT,
+    UPLEFT,
+    DOWNLEFT
 }
-m_playerDirection = FighterDirection.DOWN;
+m_playerDirection = FighterDirection.DOWN; //给键盘用的八方向
+m_fullDirection = 0;  //全方向
 
 m_isAttacking = false;
 m_isInSkill = false;

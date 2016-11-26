@@ -12,7 +12,7 @@ if(keyboard_check(ord('A')))
     
     sprite_index = spr_ysera_walk_side;
     image_xscale = 1;
-    m_playerDirection = FighterDirection.LEFT;
+    m_playerDirection = FighterDirection.UPLEFT;
     
     }
     if(keyboard_check(ord('S')))
@@ -23,7 +23,7 @@ if(keyboard_check(ord('A')))
     
     sprite_index = spr_ysera_walk_side;
     image_xscale = 1;
-    m_playerDirection = FighterDirection.LEFT;
+    m_playerDirection = FighterDirection.DOWNLEFT;
     }
     phy_position_x = phy_position_x - walkspeed;
     sprite_index = spr_ysera_walk_side;
@@ -40,7 +40,7 @@ if(keyboard_check(ord('W')))
     
     sprite_index = spr_ysera_walk_side;
     image_xscale = 1;
-    m_playerDirection = FighterDirection.LEFT;
+    m_playerDirection = FighterDirection.UPRIGHT;
     
     }
     if(keyboard_check(ord('S')))
@@ -51,7 +51,7 @@ if(keyboard_check(ord('W')))
     
     sprite_index = spr_ysera_walk_side;
     image_xscale = 1;
-    m_playerDirection = FighterDirection.LEFT;
+    m_playerDirection = FighterDirection.DOWNRIGHT;
     }
     phy_position_x = phy_position_x + walkspeed;
     sprite_index = spr_ysera_walk_side;    
