@@ -1,25 +1,59 @@
 if(m_isAttacking == false && m_isInSkill == false)
 {
+//m_speed2 = m_speed/1.414;
+walkspeed = m_speed;
 if(keyboard_check(ord('A')))
 {
     if(keyboard_check(ord('W')))
     {
-    //斜左上走
+    //斜向上走
+    walkspeed = walkspeed/1.414
+    phy_position_y = phy_position_y - walkspeed;
+    
+    sprite_index = spr_ysera_walk_side;
+    image_xscale = 1;
+    m_playerDirection = FighterDirection.LEFT;
     
     }
     if(keyboard_check(ord('S')))
     {
     //斜向下走
+    walkspeed = walkspeed/1.414
+    phy_position_y = phy_position_y + walkspeed;
     
+    sprite_index = spr_ysera_walk_side;
+    image_xscale = 1;
+    m_playerDirection = FighterDirection.LEFT;
     }
-    phy_position_x = phy_position_x - m_speed;
+    phy_position_x = phy_position_x - walkspeed;
     sprite_index = spr_ysera_walk_side;
     image_xscale = 1;
     m_playerDirection = FighterDirection.LEFT;
 }
 else if(keyboard_check(ord('D')))
 {
-    phy_position_x = phy_position_x + m_speed;
+if(keyboard_check(ord('W')))
+    {
+    //斜向上走
+    walkspeed = walkspeed/1.414
+    phy_position_y = phy_position_y - walkspeed;
+    
+    sprite_index = spr_ysera_walk_side;
+    image_xscale = 1;
+    m_playerDirection = FighterDirection.LEFT;
+    
+    }
+    if(keyboard_check(ord('S')))
+    {
+    //斜向下走
+    walkspeed = walkspeed/1.414
+    phy_position_y = phy_position_y + walkspeed;
+    
+    sprite_index = spr_ysera_walk_side;
+    image_xscale = 1;
+    m_playerDirection = FighterDirection.LEFT;
+    }
+    phy_position_x = phy_position_x + walkspeed;
     sprite_index = spr_ysera_walk_side;    
     image_xscale = -1;
     m_playerDirection = FighterDirection.RIGHT;
