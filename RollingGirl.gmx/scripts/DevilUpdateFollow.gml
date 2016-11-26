@@ -2,22 +2,21 @@ if(!m_isAttacking && !m_isInSkill){
 var player = instance_find(obj_ysera,0);
 var deltaX = player.x - x;
 var deltaY = player.y - y;
-    var mySpeed = 2;
-    if(deltaX > mySpeed){
-        phy_position_x += mySpeed;
+    if(deltaX > m_speed){
+        phy_position_x += m_speed;
     }
-    else if(deltaX < -mySpeed){
-        phy_position_x -= mySpeed;
+    else if(deltaX < -m_speed){
+        phy_position_x -= m_speed;
     }
     else{
         phy_position_x += deltaX;
     }
     
-    if(deltaY > mySpeed){
-        phy_position_y += mySpeed;
+    if(deltaY > m_speed){
+        phy_position_y += m_speed;
     }
-    else if(deltaY < -mySpeed){
-        phy_position_y -= mySpeed;
+    else if(deltaY < -m_speed){
+        phy_position_y -= m_speed;
     }
     else{
         phy_position_y += deltaY;

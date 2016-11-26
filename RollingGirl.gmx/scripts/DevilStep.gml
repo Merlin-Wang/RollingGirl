@@ -37,24 +37,24 @@ if(!m_isAttacking && !m_isInSkill){
         m_fired = false;
     }
     else if(keyboard_check(ord('A'))){
-        phy_position_x = phy_position_x - 4;
+        phy_position_x = phy_position_x - m_speed;
         sprite_index = spr_devil_walk;
         image_xscale = 1;
         m_playerDirection = PlayerDirection.LEFT;
     }
     else if(keyboard_check(ord('D'))){
-        phy_position_x = phy_position_x + 4;
+        phy_position_x = phy_position_x + m_speed;
         sprite_index = spr_devil_walk;    
         image_xscale = -1;
         m_playerDirection = FighterDirection.RIGHT;
     }
     else if(keyboard_check(ord('W'))){
-        phy_position_y = phy_position_y - 4;
+        phy_position_y = phy_position_y - m_speed;
         sprite_index = spr_devil_walk;    
         m_playerDirection = FighterDirection.UP;
     }
     else if(keyboard_check(ord('S'))){
-        phy_position_y = phy_position_y + 4;
+        phy_position_y = phy_position_y + m_speed;
         sprite_index = spr_devil_walk;
         m_playerDirection = FighterDirection.DOWN;
     }

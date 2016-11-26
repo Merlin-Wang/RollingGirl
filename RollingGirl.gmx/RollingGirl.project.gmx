@@ -18,6 +18,7 @@
         <sprite>sprites\spr_ysera_walk_back</sprite>
         <sprite>sprites\spr_ysera_walk_front</sprite>
         <sprite>sprites\spr_ysera_walk_side</sprite>
+        <sprite>sprites\spr_ysera_ultimate</sprite>
       </sprites>
       <sprites name="Devil">
         <sprite>sprites\spr_devil_die</sprite>
@@ -51,6 +52,9 @@
       <script>scripts\YseraCreate.gml</script>
       <script>scripts\YseraStep.gml</script>
       <script>scripts\YseraAniEnd.gml</script>
+      <script>scripts\YseraAttack.gml</script>
+      <script>scripts\YseraSkill.gml</script>
+      <script>scripts\YsearUltimate.gml</script>
     </scripts>
     <scripts name="Devil">
       <script>scripts\DevilUpdateRetreat.gml</script>
@@ -63,6 +67,8 @@
     </scripts>
     <script>scripts\OnDamage.gml</script>
     <script>scripts\FighterCreate.gml</script>
+    <script>scripts\FighterStepKeyboard.gml</script>
+    <script>scripts\FighterStepGamepad.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_scene_base</object>

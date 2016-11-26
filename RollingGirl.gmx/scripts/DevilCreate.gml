@@ -1,5 +1,7 @@
 event_inherited();
 
+m_name = "devil";
+m_speed = 4;
 
 enum DevilState{   //设置状态机
     DEVIL_FOLLOW,    //追踪
