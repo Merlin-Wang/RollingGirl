@@ -54,6 +54,10 @@ alarm[0] = 150;
 shooter.m_beingarrow = 0;
 shooter.phy_position_x = self.phy_position_x;
 shooter.phy_position_y = self.phy_position_y;
+
+m_attachedHitbox = instance_create(x, y, obj_ysera_hitbox);
+m_attachedHitbox.father = shooter.id;//恢复判定
+
 instance_destroy();
 </string>
           </argument>
@@ -118,12 +122,16 @@ if(keyboard_check(ord('W')))
 }
 else if(keyboard_check(ord('W')))
 {
-    phy_position_y = phy_position_y - m_speed;
+    phy_position_y = phy_position_y - walkspeed;
 
 }
 else if(keyboard_check(ord('S')))
 {
-    phy_position_y = phy_position_y + m_speed;
+    phy_position_y = phy_position_y + walkspeed;
+}
+else
+{
+    //show_debug_message(phy_position_y);
 }
 
 if(abs(gamepad_axis_value(global.slot, gp_axislh))&gt;0.1||abs(gamepad_axis_value(global.slot, gp_axislv))&gt;0.1) //用0.1去掉扰动问题
@@ -163,6 +171,9 @@ shooter.visible = true;
 shooter.m_beingarrow = 0;
 shooter.phy_position_x = self.phy_position_x;
 shooter.phy_position_y = self.phy_position_y;
+
+m_attachedHitbox = instance_create(x, y, obj_ysera_hitbox);
+m_attachedHitbox.father = shooter.id;//恢复判定
 event_inherited();
 }
 </string>

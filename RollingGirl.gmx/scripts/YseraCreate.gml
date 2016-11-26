@@ -9,3 +9,4 @@ m_beingarrow = 0;
 m_attachedHitbox = instance_create(x, y, obj_ysera_hitbox);
 m_attachedHitbox.father = id;//自身判定
 
+show_debug_message(m_hp);

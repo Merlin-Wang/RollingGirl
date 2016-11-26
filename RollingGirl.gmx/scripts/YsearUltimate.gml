@@ -4,7 +4,7 @@ if(sprite_index == spr_ysera_ultimate){
         ultimatebullet.shooter = id;
         var deltaX = 0;
         var deltaY = 0;
-        switch(m_playerDirection){
+        /*switch(m_playerDirection){
         case FighterDirection.UP:
           deltaY = -89;
           deltaX = 0;
@@ -24,10 +24,11 @@ if(sprite_index == spr_ysera_ultimate){
           ultimatebullet.image_angle = 180;
           deltaX = 65;
           deltaY = -33;
-          break;
+          break;dd
         } 
         ultimatebullet.phy_position_x += deltaX;
         ultimatebullet.phy_position_y += deltaY;
+        */
         self.visible = false;
         //show_debug_message("隐形了！");
         m_fired = true;

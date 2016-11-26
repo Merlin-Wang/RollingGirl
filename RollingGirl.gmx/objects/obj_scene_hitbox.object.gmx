@@ -53,13 +53,10 @@ phy_fixed_rotation = true;//固定旋转
 {
     phy_position_x = father.phy_position_x;
     phy_position_y = father.phy_position_y;
-    if(father.visible == false)
+    
+    if(father.m_isDead == 1)
         {
-        self.visible = false;
-        }
-     if(father.visible == true)
-        {
-        self.visible = true;
+        instance_destroy();
         }
 }
 </string>
@@ -67,7 +64,7 @@ phy_fixed_rotation = true;//固定旋转
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_ysera_ultimate_bullet">
+    <event eventtype="4" ename="obj_ysera_magic_bullet">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -90,7 +87,7 @@ phy_fixed_rotation = true;//固定旋转
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_ysera_magic_bullet">
+    <event eventtype="4" ename="obj_ysera_ultimate_bullet">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -160,7 +157,7 @@ phy_fixed_rotation = true;//固定旋转
       </action>
     </event>
   </events>
-  <PhysicsObject>0</PhysicsObject>
+  <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
