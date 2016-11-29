@@ -43,5 +43,7 @@ YseraSkill();
 //大招
 YsearUltimate();
 
-show_debug_message(m_hp);
+//翻滚
+YseraRoll();
 
+show_debug_message(m_playerDirection);

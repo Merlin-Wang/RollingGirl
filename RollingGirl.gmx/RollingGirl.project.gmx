@@ -20,6 +20,7 @@
         <sprite>sprites\spr_ysera_walk_side</sprite>
         <sprite>sprites\spr_ysera_ultimate</sprite>
         <sprite>sprites\spr_ysera_ultimate_bullet</sprite>
+        <sprite>sprites\spr_ysera_roll</sprite>
       </sprites>
       <sprites name="Devil">
         <sprite>sprites\spr_devil_die</sprite>
@@ -56,6 +57,7 @@
       <script>scripts\YseraAttack.gml</script>
       <script>scripts\YseraSkill.gml</script>
       <script>scripts\YsearUltimate.gml</script>
+      <script>scripts\YseraRoll.gml</script>
     </scripts>
     <scripts name="Devil">
       <script>scripts\DevilUpdateRetreat.gml</script>

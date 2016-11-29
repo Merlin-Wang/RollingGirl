@@ -8,7 +8,7 @@ for (var i = 0; i < gp_num; i++;)
       }
    }
 if(gamepad_is_connected(global.slot)){
-if(m_isAttacking == false && m_isInSkill == false && m_isInUltimate == false)
+if(m_isAttacking == false && m_isInSkill == false && m_isInUltimate == false && m_isRolling == false)
 {
 if(abs(gamepad_axis_value(global.slot, gp_axislh))>0.1||abs(gamepad_axis_value(global.slot, gp_axislv))>0.1) //用0.1去掉扰动问题
 {
@@ -43,6 +43,13 @@ else
     deltaY = gamepad_axis_value(global.slot, gp_axislv)*m_speed;
     phy_position_x += deltaX;
     phy_position_y += deltaY;
+    if(gamepad_button_check(global.slot,gp_face2)){
+    sprite_index = spr_ysera_roll;
+    image_index = 0;
+    m_isRolling = true;
+    m_fired = false;
+    m_rollcount = 0;
+}
 }
 
 
@@ -78,6 +85,7 @@ else if(gamepad_button_check(global.slot,gp_face4)){
     m_isInUltimate = true;
     m_fired = false;
 }
+
 
 else
 {

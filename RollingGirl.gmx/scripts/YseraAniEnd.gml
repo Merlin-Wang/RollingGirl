@@ -14,3 +14,9 @@ if(m_isInSkill && sprite_index == spr_ysera_skill){
 if(m_isInUltimate && sprite_index == spr_ysera_ultimate){
     m_isInUltimate = false;
 }
+if(m_isRolling && sprite_index == spr_ysera_roll){
+    m_isRolling = false;
+    m_attachedHitbox = instance_create(x, y, obj_ysera_hitbox);
+    m_attachedHitbox.father = id;//恢复判定
+
+}

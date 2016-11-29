@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 
-if(father.m_beingarrow == 1)
+if(father.m_beingarrow == 1 || father.m_isRolling == 1)
 {
 instance_destroy();
 
