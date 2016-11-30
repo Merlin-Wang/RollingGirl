@@ -56,7 +56,7 @@ event_inherited();
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="7">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -73,7 +73,10 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>YseraAniEnd();
+            <string>draw_sprite(spr_icon_ysera_attack,-1,800,720);
+draw_sprite(spr_icon_ysera_skill,-1,860,720);
+draw_sprite(spr_icon_ysera_roll,-1,920,720);
+draw_sprite(spr_icon_ysera_ultimate,-1,980,720);
 </string>
           </argument>
         </arguments>

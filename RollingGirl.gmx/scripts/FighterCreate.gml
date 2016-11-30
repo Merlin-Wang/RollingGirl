@@ -7,6 +7,16 @@ m_playerid = 0;
 m_rollingdistance = 10;
 m_rollspeed = 15;
 m_rollstepmax = 10;
+m_rollcount = 0;
+m_attackcd = 0;
+m_skillcd = 0;
+m_rollcd = 0;
+m_ultimatecd = 60;
+m_attackcdmax = 0;
+m_skillcdmax = 12;
+m_rollcdmax = 5;
+m_ultimatecdmax = 60;
+
 
 enum FighterDirection{
     UP,

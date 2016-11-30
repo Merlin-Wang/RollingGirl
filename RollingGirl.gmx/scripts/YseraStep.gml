@@ -1,5 +1,7 @@
 image_speed = 0.25  //调整动画速度
 
+event_inherited();
+
 if(m_isDead)  //死亡则退出
     return 0;
     
@@ -46,4 +48,3 @@ YsearUltimate();
 //翻滚
 YseraRoll();
 
-show_debug_message(m_playerDirection);

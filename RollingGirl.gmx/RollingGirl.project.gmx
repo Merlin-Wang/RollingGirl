@@ -41,6 +41,12 @@
       <sprite>sprites\spr_light</sprite>
       <sprite>sprites\spr_pool</sprite>
     </sprites>
+    <sprites name="UI">
+      <sprite>sprites\spr_icon_ysera_attack</sprite>
+      <sprite>sprites\spr_icon_ysera_skill</sprite>
+      <sprite>sprites\spr_icon_ysera_roll</sprite>
+      <sprite>sprites\spr_icon_ysera_ultimate</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_cave</background>
@@ -72,6 +78,8 @@
     <script>scripts\FighterCreate.gml</script>
     <script>scripts\FighterStepKeyboard.gml</script>
     <script>scripts\FighterStepGamepad.gml</script>
+    <script>scripts\FrighterStep.gml</script>
+    <script>scripts\FrighterAniEnd.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_scene_base</object>

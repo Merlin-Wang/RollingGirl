@@ -5,8 +5,14 @@ m_hp = 20;
 m_name = "ysera";
 m_speed = 8;
 m_beingarrow = 0;
+m_attackcdmax = 0;
+m_skillcdmax = 12;
+m_rollcdmax = 5;
+m_umlenergymax = 100;
 
 m_attachedHitbox = instance_create(x, y, obj_ysera_hitbox);
 m_attachedHitbox.father = id;//自身判定
 
-show_debug_message(m_hp);
+
+
+

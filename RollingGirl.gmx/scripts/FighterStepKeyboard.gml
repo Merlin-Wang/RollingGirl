@@ -16,7 +16,7 @@ if(keyboard_check(ord('A')))
     image_xscale = 1;
     m_playerDirection = FighterDirection.UPLEFT;
     m_fullDirection = 135;
-    if(keyboard_check_pressed(vk_space)){
+    if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
         sprite_index = spr_ysera_roll;
         image_index = 0;
         m_isRolling = true;
@@ -34,7 +34,7 @@ if(keyboard_check(ord('A')))
     image_xscale = 1;
     m_playerDirection = FighterDirection.DOWNLEFT;
     m_fullDirection = 225;
-    if(keyboard_check_pressed(vk_space)){
+    if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
         sprite_index = spr_ysera_roll;
         image_index = 0;
         m_isRolling = true;
@@ -45,7 +45,7 @@ if(keyboard_check(ord('A')))
     phy_position_x = phy_position_x - walkspeed;
     sprite_index = spr_ysera_walk_side;
     image_xscale = 1;
-    if(keyboard_check_pressed(vk_space)){
+    if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
         sprite_index = spr_ysera_roll;
         image_index = 0;
         m_isRolling = true;
@@ -68,7 +68,7 @@ else if(keyboard_check(ord('D')))
     m_playerDirection = FighterDirection.UPRIGHT;
     m_fullDirection = 45;
     
-    if(keyboard_check_pressed(vk_space)){
+    if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
         sprite_index = spr_ysera_roll;
         image_index = 0;
         m_isRolling = true;
@@ -86,7 +86,7 @@ else if(keyboard_check(ord('D')))
     image_xscale = 1;
     m_playerDirection = FighterDirection.DOWNRIGHT;
     m_fullDirection = 315;
-    if(keyboard_check_pressed(vk_space)){
+    if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
         sprite_index = spr_ysera_roll;
         image_index = 0;
         m_isRolling = true;
@@ -97,7 +97,7 @@ else if(keyboard_check(ord('D')))
     phy_position_x = phy_position_x + walkspeed;
     sprite_index = spr_ysera_walk_side;    
     image_xscale = -1;
-    if(keyboard_check_pressed(vk_space)){
+    if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
         sprite_index = spr_ysera_roll;
         image_index = 0;
         m_isRolling = true;
@@ -111,7 +111,7 @@ else if(keyboard_check(ord('W')))
     sprite_index = spr_ysera_walk_back;    
     m_playerDirection = FighterDirection.UP;
     m_fullDirection = 90;
-    if(keyboard_check_pressed(vk_space)){
+    if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
         sprite_index = spr_ysera_roll;
         image_index = 0;
         m_isRolling = true;
@@ -125,7 +125,7 @@ else if(keyboard_check(ord('S')))
     sprite_index = spr_ysera_walk_front;
     m_playerDirection = FighterDirection.DOWN;
     m_fullDirection = 270;
-    if(keyboard_check_pressed(vk_space)){
+    if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
         sprite_index = spr_ysera_roll;
         image_index = 0;
         m_isRolling = true;
@@ -133,7 +133,7 @@ else if(keyboard_check(ord('S')))
         m_rollcount = 0;
         }
 }
-else if(keyboard_check(ord('J'))){
+else if(keyboard_check(ord('J'))&&m_attackcd <= 0){
   switch(m_playerDirection)
   {
   case FighterDirection.UP:
@@ -153,19 +153,19 @@ else if(keyboard_check(ord('J'))){
   image_index = 0;
   m_fired = false;
 }
-else if(keyboard_check(ord('K'))){
+else if(keyboard_check(ord('K'))&&m_skillcd <= 0){
     sprite_index = spr_ysera_skill;
     image_index = 0;
     m_isInSkill = true;
     m_fired = false;
 }
-else if(keyboard_check(ord('L'))){
+else if(keyboard_check(ord('L'))&&m_ultimatecd <= 0){
     sprite_index = spr_ysera_ultimate;
     image_index = 0;
     m_isInUltimate = true;
     m_fired = false;
 }
-else if(keyboard_check_pressed(vk_space)){
+else if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
     sprite_index = spr_ysera_roll;
     image_index = 0;
     m_isRolling = true;
