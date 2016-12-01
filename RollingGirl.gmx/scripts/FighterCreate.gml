@@ -31,7 +31,7 @@ enum FighterDirection{
 m_playerDirection = FighterDirection.DOWN; //给键盘用的八方向
 m_fullDirection = 270;  //全方向
 
-m_isAttacking = false;
+m_isAttacking = false;   //标记英雄是否在攻击
 m_isInSkill = false;
 m_isInUltimate = false;
 m_isRolling = false;
