@@ -1,9 +1,7 @@
-if(sprite_index == spr_ysera_attack_side
-|| sprite_index == spr_ysera_attack_front
-|| sprite_index == spr_ysera_attack_back){
-    if(image_index > 2 && m_fired == false){
-         var magicBullet = instance_create(x, y, obj_ysera_magic_bullet);
-         magicBullet.shooter = id;
+if(m_isAttacking){
+    if(image_index > 2 && m_arrowStatus == ArrowStatus.InHand){
+        var magicBullet = instance_create(x, y, obj_ysera_magic_bullet);
+        magicBullet.shooter = id;
         var deltaX = 0;
         var deltaY = 0;
         switch(m_playerDirection){
@@ -34,5 +32,6 @@ if(sprite_index == spr_ysera_attack_side
         magicBullet.phy_position_x += deltaX;
         magicBullet.phy_position_y += deltaY;
         m_fired = true;
+        m_arrowStatus = ArrowStatus.FlyingTo;
     }
 }

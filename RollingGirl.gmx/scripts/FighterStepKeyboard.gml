@@ -134,24 +134,26 @@ else if(keyboard_check(ord('S')))
         }
 }
 else if(keyboard_check(ord('J'))&&m_attackcd <= 0){
-  switch(m_playerDirection)
-  {
-  case FighterDirection.UP:
-    sprite_index = spr_ysera_attack_back;
-    break;
-  case FighterDirection.DOWN:
-    sprite_index = spr_ysera_attack_front;
-    break;
-  case FighterDirection.LEFT:
-    sprite_index = spr_ysera_attack_side;
-    break;
-  case FighterDirection.RIGHT:
-    sprite_index = spr_ysera_attack_side;
-    break;
+  if(!m_isAttacking && m_arrowStatus == ArrowStatus.InHand){
+    switch(m_playerDirection)
+    {
+    case FighterDirection.UP:
+       sprite_index = spr_ysera_attack_back;
+       break;
+    case FighterDirection.DOWN:
+       sprite_index = spr_ysera_attack_front;
+       break;
+    case FighterDirection.LEFT:
+       sprite_index = spr_ysera_attack_side;
+       break;
+    case FighterDirection.RIGHT:
+       sprite_index = spr_ysera_attack_side;
+       break;
+    }
+    m_isAttacking = true;
+    image_index = 0;
+    m_fired = false;
   }
-  m_isAttacking = true;
-  image_index = 0;
-  m_fired = false;
 }
 else if(keyboard_check(ord('K'))&&m_skillcd <= 0){
     sprite_index = spr_ysera_skill;

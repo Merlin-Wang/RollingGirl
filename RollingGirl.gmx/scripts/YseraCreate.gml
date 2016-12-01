@@ -9,7 +9,13 @@ m_attackcdmax = 0;
 m_skillcdmax = 12;
 m_rollcdmax = 5;
 m_umlenergymax = 100;
+m_arrowStatus = ArrowStatus.InHand;
 
+enum ArrowStatus {
+    InHand,
+    FlyingTo,
+    FlyingBack
+};               //标记箭的当前状态
 m_attachedHitbox = instance_create(x, y, obj_ysera_hitbox);
 m_attachedHitbox.father = id;//自身判定
 
