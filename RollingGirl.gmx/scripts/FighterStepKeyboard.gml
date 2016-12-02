@@ -156,10 +156,10 @@ else if(keyboard_check(ord('J'))&&m_attackcd <= 0){
   }
 }
 else if(keyboard_check(ord('K'))&&m_skillcd <= 0){
-    sprite_index = spr_ysera_skill;
-    image_index = 0;
-    m_isInSkill = true;
-    m_fired = false;
+    //sprite_index = spr_ysera_skill;
+    //image_index = 0;
+    //m_isInSkill = true;
+    //m_fired = false;
 }
 else if(keyboard_check(ord('L'))&&m_ultimatecd <= 0){
     sprite_index = spr_ysera_ultimate;
