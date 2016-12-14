@@ -8,7 +8,7 @@ m_beingarrow = 0;
 m_attackcdmax = 0;
 m_skillcdmax = 12;
 m_rollcdmax = 5;
-m_umlenergymax = 100;
+m_ultimatecdmax = 60;
 m_arrowStatus = ArrowStatus.InHand;
 
 enum ArrowStatus {
