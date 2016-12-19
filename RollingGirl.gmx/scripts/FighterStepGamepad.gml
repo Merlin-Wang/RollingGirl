@@ -43,7 +43,7 @@ else
     deltaY = gamepad_axis_value(global.slot, gp_axislv)*m_speed;
     phy_position_x += deltaX;
     phy_position_y += deltaY;
-    if(gamepad_button_check(global.slot,gp_face2)&&m_rollcd <= 0){
+    if(gamepad_button_check_pressed(global.slot,gp_face2)&&m_rollcd <= 0){
     sprite_index = spr_ysera_roll;
     image_index = 0;
     m_isRolling = true;
@@ -53,7 +53,7 @@ else
 }
 
 
-else if(gamepad_button_check(global.slot,gp_face1)&&m_attackcd <= 0){
+else if(gamepad_button_check_pressed(global.slot,gp_face1)&&m_attackcd <= 0){
   switch(m_playerDirection)
   {
   case FighterDirection.UP:
@@ -73,13 +73,13 @@ else if(gamepad_button_check(global.slot,gp_face1)&&m_attackcd <= 0){
   image_index = 0;
   m_fired = false;
 }
-else if(gamepad_button_check(global.slot,gp_face3)&&m_skillcd <= 0){
+else if(gamepad_button_check_pressed(global.slot,gp_face3)&&m_skillcd <= 0){
     sprite_index = spr_ysera_skill;
     image_index = 0;
     m_isInSkill = true;
     m_fired = false;
 }
-else if(gamepad_button_check(global.slot,gp_face4)&&m_ultimatecd <= 0){
+else if(gamepad_button_check_pressed(global.slot,gp_face4)&&m_ultimatecd <= 0){
     sprite_index = spr_ysera_ultimate;
     image_index = 0;
     m_isInUltimate = true;

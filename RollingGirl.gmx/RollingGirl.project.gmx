@@ -93,6 +93,11 @@
     <object>objects\obj_scene_bullet</object>
     <object>objects\obj_scene_director</object>
     <object>objects\obj_scene_skill</object>
+    <object>objects\obj_scene_ui</object>
+    <objects name="Director">
+      <object>objects\obj_director_select</object>
+      <object>objects\obj_director_battle</object>
+    </objects>
     <objects name="Devil">
       <object>objects\obj_devil</object>
       <object>objects\obj_devil_attack_area</object>
@@ -119,8 +124,17 @@
       <object>objects\obj_devil_hitbox</object>
       <object>objects\obj_ysera_hitbox</object>
     </objects>
+    <objects name="UI">
+      <objects name="Select">
+        <object>objects\obj_ui_select_character1name</object>
+        <object>objects\obj_ui_select_character2name</object>
+        <object>objects\obj_ui_select_character3name</object>
+        <object>objects\obj_ui_select_character4name</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_select</room>
     <room>rooms\room_battle</room>
   </rooms>
   <help>

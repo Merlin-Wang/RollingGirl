@@ -133,7 +133,7 @@ else if(keyboard_check(ord('S')))
         m_rollcount = 0;
         }
 }
-else if(keyboard_check(ord('J'))&&m_attackcd <= 0){
+else if(keyboard_check_pressed(ord('J'))&&m_attackcd <= 0){
   if(!m_isAttacking && m_arrowStatus == ArrowStatus.InHand){
     switch(m_playerDirection)
     {
@@ -155,13 +155,13 @@ else if(keyboard_check(ord('J'))&&m_attackcd <= 0){
     m_fired = false;
   }
 }
-else if(keyboard_check(ord('K'))&&m_skillcd <= 0){
+else if(keyboard_check_pressed(ord('K'))&&m_skillcd <= 0){
     //sprite_index = spr_ysera_skill;
     //image_index = 0;
     //m_isInSkill = true;
     //m_fired = false;
 }
-else if(keyboard_check(ord('L'))&&m_ultimatecd <= 0){
+else if(keyboard_check_pressed(ord('L'))&&m_ultimatecd <= 0){
     sprite_index = spr_ysera_ultimate;
     image_index = 0;
     m_isInUltimate = true;
