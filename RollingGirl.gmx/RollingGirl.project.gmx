@@ -65,6 +65,15 @@
       <script>scripts\YsearUltimate.gml</script>
       <script>scripts\YseraRoll.gml</script>
     </scripts>
+    <scripts name="Aliya">
+      <script>scripts\AliyaCreate.gml</script>
+      <script>scripts\AliyaStep.gml</script>
+      <script>scripts\AliyaAniEnd.gml</script>
+      <script>scripts\AliyaAttack.gml</script>
+      <script>scripts\AliyaSkill.gml</script>
+      <script>scripts\AliyaUltimate.gml</script>
+      <script>scripts\AliyaRoll.gml</script>
+    </scripts>
     <scripts name="Devil">
       <script>scripts\DevilUpdateRetreat.gml</script>
       <script>scripts\DevilUpdateDash.gml</script>
@@ -98,6 +107,9 @@
       <object>objects\obj_director_select</object>
       <object>objects\obj_director_battle</object>
     </objects>
+    <objects name="Aliya">
+      <object>objects\obj_aliya</object>
+    </objects>
     <objects name="Devil">
       <object>objects\obj_devil</object>
       <object>objects\obj_devil_attack_area</object>
@@ -123,6 +135,7 @@
     <objects name="Hitbox">
       <object>objects\obj_devil_hitbox</object>
       <object>objects\obj_ysera_hitbox</object>
+      <object>objects\obj_aliya_hitbox</object>
     </objects>
     <objects name="UI">
       <objects name="Select">
