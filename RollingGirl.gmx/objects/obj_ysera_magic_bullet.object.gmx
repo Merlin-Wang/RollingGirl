@@ -181,7 +181,7 @@ phy_position_y = phy_position_y + m_speedY;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(shooter.m_arrowStatus != ArrowStatus.InHand)
+            <string>if(shooter.m_arrowStatus != ArrowStatus.InHand &amp;&amp; shooter.m_skillcd&lt;=0)
 {
     shooter.phy_position_x = phy_position_x;
     shooter.phy_position_y = phy_position_y + 33;

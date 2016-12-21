@@ -30,6 +30,19 @@
         <sprite>sprites\spr_devil_hitbox</sprite>
         <sprite>sprites\spr_devil_attack_area</sprite>
       </sprites>
+      <sprites name="Aliya">
+        <sprite>sprites\spr_aliya_idle</sprite>
+        <sprite>sprites\spr_aliya_attack_front</sprite>
+        <sprite>sprites\spr_aliya_attack_back</sprite>
+        <sprite>sprites\spr_aliya_skill</sprite>
+        <sprite>sprites\spr_aliya_attack_side</sprite>
+        <sprite>sprites\spr_aliya_skill_effect</sprite>
+        <sprite>sprites\spr_aliya_walk_front</sprite>
+        <sprite>sprites\spr_aliya_walk_back</sprite>
+        <sprite>sprites\spr_aliya_ultimate</sprite>
+        <sprite>sprites\spr_aliya_walk_side</sprite>
+        <sprite>sprites\spr_aliya_roll</sprite>
+      </sprites>
     </sprites>
     <sprites name="StaticObject">
       <sprite>sprites\spr_statue</sprite>
@@ -59,7 +72,6 @@
     <scripts name="Ysera">
       <script>scripts\YseraCreate.gml</script>
       <script>scripts\YseraStep.gml</script>
-      <script>scripts\YseraAniEnd.gml</script>
       <script>scripts\YseraAttack.gml</script>
       <script>scripts\YseraSkill.gml</script>
       <script>scripts\YsearUltimate.gml</script>
@@ -68,7 +80,6 @@
     <scripts name="Aliya">
       <script>scripts\AliyaCreate.gml</script>
       <script>scripts\AliyaStep.gml</script>
-      <script>scripts\AliyaAniEnd.gml</script>
       <script>scripts\AliyaAttack.gml</script>
       <script>scripts\AliyaSkill.gml</script>
       <script>scripts\AliyaUltimate.gml</script>
@@ -106,6 +117,7 @@
     <objects name="Director">
       <object>objects\obj_director_select</object>
       <object>objects\obj_director_battle</object>
+      <object>objects\obj_director_pve1</object>
     </objects>
     <objects name="Aliya">
       <object>objects\obj_aliya</object>
@@ -149,6 +161,7 @@
   <rooms name="rooms">
     <room>rooms\room_select</room>
     <room>rooms\room_battle</room>
+    <room>rooms\room_pve1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

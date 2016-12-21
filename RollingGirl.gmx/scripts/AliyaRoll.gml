@@ -1,4 +1,4 @@
-if(sprite_index == spr_ysera_roll){
+if(sprite_index == spr_aliya_roll){
     if(image_index > 2 && m_fired == false && m_rollcount<m_rollstepmax){
        if(global.slot>0)
             {
