@@ -18,23 +18,23 @@ m_fullDirection = point_direction(0, 0, gamepad_axis_value(global.slot, gp_axisl
 //这里先用了4方向的图做出了效果，等换了8方向的图这里要改
 if(m_fullDirection > 45 && m_fullDirection <135)
     {
-    sprite_index = spr_ysera_walk_back;
+    sprite_index = sprwalk_back;
     m_playerDirection = FighterDirection.UP;
     }
 else if(m_fullDirection > 135 && m_fullDirection <225)
     {
-    sprite_index = spr_ysera_walk_side;
+    sprite_index = sprwalk_side;
     image_xscale = 1;
     m_playerDirection = FighterDirection.LEFT;
     }
 else if(m_fullDirection > 225 && m_fullDirection <315)
     {
-    sprite_index = spr_ysera_walk_front;
+    sprite_index = sprwalk_front;
     m_playerDirection = FighterDirection.DOWN;
     }
 else
     {
-    sprite_index = spr_ysera_walk_side;
+    sprite_index = sprwalk_side;
     image_xscale = -1;
     m_playerDirection = FighterDirection.RIGHT;
     }
@@ -44,12 +44,13 @@ else
     phy_position_x += deltaX;
     phy_position_y += deltaY;
     if(gamepad_button_check_pressed(global.slot,gp_face2)&&m_rollcd <= 0){
-    sprite_index = spr_ysera_roll;
+    sprite_index = sprroll;
     image_index = 0;
     m_isRolling = true;
     m_fired = false;
     m_rollcount = 0;
 }
+
 }
 
 
@@ -57,16 +58,16 @@ else if(gamepad_button_check_pressed(global.slot,gp_face1)&&m_attackcd <= 0){
   switch(m_playerDirection)
   {
   case FighterDirection.UP:
-    sprite_index = spr_ysera_attack_back;
+    sprite_index = sprattack_back;
     break;
   case FighterDirection.DOWN:
-    sprite_index = spr_ysera_attack_front;
+    sprite_index = sprattack_front;
     break;
   case FighterDirection.LEFT:
-    sprite_index = spr_ysera_attack_side;
+    sprite_index = sprattack_side;
     break;
   case FighterDirection.RIGHT:
-    sprite_index = spr_ysera_attack_side;
+    sprite_index = sprattack_side;
     break;
   }
   m_isAttacking = true;
@@ -74,22 +75,29 @@ else if(gamepad_button_check_pressed(global.slot,gp_face1)&&m_attackcd <= 0){
   m_fired = false;
 }
 else if(gamepad_button_check_pressed(global.slot,gp_face3)&&m_skillcd <= 0){
-    sprite_index = spr_ysera_skill;
+    sprite_index = sprskill;
     image_index = 0;
     m_isInSkill = true;
     m_fired = false;
 }
 else if(gamepad_button_check_pressed(global.slot,gp_face4)&&m_ultimatecd <= 0){
-    sprite_index = spr_ysera_ultimate;
+    sprite_index = sprultimate;
     image_index = 0;
     m_isInUltimate = true;
     m_fired = false;
 }
 
+else if(gamepad_button_check_pressed(global.slot,gp_face2)&&m_rollcd <= 0){
+    sprite_index = sprroll;
+    image_index = 0;
+    m_isRolling = true;
+    m_fired = false;
+    m_rollcount = 0;
+}
 
 else
 {
-    sprite_index = spr_ysera_idle;
+    sprite_index = spridle;
 }
 }
 }
