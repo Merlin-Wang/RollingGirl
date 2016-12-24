@@ -52,9 +52,12 @@ else
 }
 
 }
+else
+{
+    sprite_index = spridle;
+}
 
-
-else if(gamepad_button_check_pressed(global.slot,gp_face1)&&m_attackcd <= 0){
+if(gamepad_button_check_pressed(global.slot,gp_face1)&&m_attackcd <= 0){
   switch(m_playerDirection)
   {
   case FighterDirection.UP:
@@ -95,9 +98,6 @@ else if(gamepad_button_check_pressed(global.slot,gp_face2)&&m_rollcd <= 0){
     m_rollcount = 0;
 }
 
-else
-{
-    sprite_index = spridle;
-}
+
 }
 }

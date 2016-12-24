@@ -9,6 +9,8 @@ m_attackcdmax = 0;
 m_skillcdmax = 12;
 m_rollcdmax = 5;
 m_ultimatecdmax = 60;
+m_xuegaonummax = 5;
+m_xuegaonumnow = 0;
 
 
 m_attachedHitbox = instance_create(x, y, obj_aliya_hitbox);

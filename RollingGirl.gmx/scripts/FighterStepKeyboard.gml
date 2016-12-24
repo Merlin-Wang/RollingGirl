@@ -180,8 +180,13 @@ else if(keyboard_check(ord('S')))
         m_rollcount = 0;
         }
 }
-else if(keyboard_check_pressed(ord('J'))&&m_attackcd <= 0){
-  if(global.characterid==1&&!m_isAttacking && m_arrowStatus == ArrowStatus.InHand){
+else
+{
+    sprite_index = spridle;
+}
+
+if(keyboard_check_pressed(ord('J'))&&m_attackcd <= 0){
+  if(!m_isAttacking){
     switch(m_playerDirection)
     {
     case FighterDirection.UP:
@@ -220,8 +225,5 @@ else if(keyboard_check_pressed(vk_space)&&m_rollcd <= 0){
     m_isRolling = true;
     m_fired = false;
 }
-else
-{
-    sprite_index = spridle;
-}
+
 }

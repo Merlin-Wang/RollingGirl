@@ -1,4 +1,4 @@
-if(m_isAttacking){
+if(m_isAttacking && m_fired == false){
     if(image_index > 2 && m_arrowStatus == ArrowStatus.InHand){
         var magicBullet = instance_create(x, y, obj_ysera_magic_bullet);
         magicBullet.shooter = id;
