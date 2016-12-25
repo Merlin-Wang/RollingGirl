@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>alarm[0]=10;
 event_inherited();
+
 </string>
           </argument>
         </arguments>

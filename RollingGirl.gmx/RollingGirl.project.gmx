@@ -44,6 +44,7 @@
         <sprite>sprites\spr_aliya_roll</sprite>
         <sprite>sprites\spr_aliya_xuegao</sprite>
         <sprite>sprites\spr_aliya_xuegaoboom</sprite>
+        <sprite>sprites\spr_aliya_kick_area</sprite>
       </sprites>
     </sprites>
     <sprites name="StaticObject">
@@ -125,6 +126,7 @@
       <object>objects\obj_aliya</object>
       <object>objects\obj_aliya_xuegao</object>
       <object>objects\obj_aliya_xuegaoboom</object>
+      <object>objects\obj_aliya_kick_area</object>
     </objects>
     <objects name="Devil">
       <object>objects\obj_devil</object>

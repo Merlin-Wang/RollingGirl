@@ -33,3 +33,39 @@ if(m_ultimatecd > 0)  //控制技能cd
         m_ultimatecd = 0;
         }
     }
+    
+
+//这里处理被击飞的状态
+if(m_undercontrol == false)
+{
+phy_position_x = phy_position_x + m_speedX;
+phy_position_y = phy_position_y + m_speedY;
+if(m_speedX > 0)
+    {m_speedX += m_accelerate;
+    if(m_speedX < 0)
+        {m_speedX = 0;}
+    }
+if(m_speedX < 0)
+    {m_speedX -= m_accelerate;
+    if(m_speedX > 0)
+        {m_speedX = 0;}
+    }
+
+if(m_speedY > 0)
+    {m_speedY += m_accelerate;
+    if(m_speedY < 0)
+        {m_speedY = 0;}
+    }
+if(m_speedY < 0)
+    {m_speedY -= m_accelerate;
+    if(m_speedY > 0)
+        {m_speedY = 0;}
+    }
+if(m_speedX==0&&m_speedY==0)
+    {
+    m_undercontrol = true;
+    }
+
+
+
+}

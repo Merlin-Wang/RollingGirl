@@ -1,12 +1,12 @@
 event_inherited();
 
 m_playerid = 0;//0代表AI操控
-m_hp = 20;
+m_hp = 1;
 m_name = "aliya";
 m_speed = 8;
 m_beingarrow = 0;
 m_attackcdmax = 0;
-m_skillcdmax = 12;
+m_skillcdmax = 0;
 m_rollcdmax = 5;
 m_ultimatecdmax = 60;
 m_xuegaonummax = 5;

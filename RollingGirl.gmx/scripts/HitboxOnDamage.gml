@@ -10,6 +10,8 @@ if(instance_exists(father)){
         with(father){
         OnDamage();}
         break;
+        case 2:
+        break;
         }
     }
 }

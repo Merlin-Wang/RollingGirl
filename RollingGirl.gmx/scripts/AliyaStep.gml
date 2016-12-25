@@ -11,22 +11,11 @@ if(m_hp <= 0){   //死了播死亡动画
     return 0;
 }
 
-if(m_playerid>0){//人手操
-    if(m_beingarrow==0)
-    {
+if(m_playerid>0&&m_undercontrol==true){//人手操
+
     FighterStepKeyboard();
     FighterStepGamepad();
-    }
-    else
-    {
-    var ultbullet = instance_find(obj_ysera_ultimate_bullet,0);
-    if point_distance(x, y, ultbullet.x, ultbullet.y) > 5
-        {
-         move_towards_point(ultbullet.x, ultbullet.y, 20);
-         }
-    else speed = 0;
-    
-    }
+   
 }
 
 else

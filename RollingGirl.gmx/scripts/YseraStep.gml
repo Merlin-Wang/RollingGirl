@@ -11,7 +11,7 @@ if(m_hp <= 0){   //死了播死亡动画
     return 0;
 }
 
-if(m_playerid>0){//人手操
+if(m_playerid>0&&m_undercontrol==true){//人手操
     if(m_beingarrow==0)
     {
     FighterStepKeyboard();

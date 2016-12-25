@@ -16,6 +16,10 @@ m_attackcdmax = 0;
 m_skillcdmax = 12;
 m_rollcdmax = 5;
 m_ultimatecdmax = 60;
+m_undercontrol = true;
+m_speedY = 0;   //这三条用于被击飞的状态
+m_speedX = 0;
+m_accelerate = -0.2;   
 
 
 enum FighterDirection{
