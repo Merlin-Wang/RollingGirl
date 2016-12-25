@@ -236,7 +236,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>i = 1;
+            <string>m_speedX = 0;
+m_speedY = 0;
 </string>
           </argument>
         </arguments>

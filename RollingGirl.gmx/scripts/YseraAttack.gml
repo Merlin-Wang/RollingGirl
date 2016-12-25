@@ -7,32 +7,80 @@ if(m_isAttacking && m_fired == false){
         var deltaY = 0;
         switch(m_playerDirection){
         case FighterDirection.UP:
+        {
           magicBullet.m_speedX = lengthdir_x(50,m_fullDirection)/2;
           magicBullet.m_speedY = lengthdir_y(50,m_fullDirection)/2;
           deltaY = -89;
           deltaX = 0;
-          magicBullet.image_angle = 270;
+          magicBullet.phy_rotation = 90;
           break;
-        case FighterDirection.DOWN:
+        }
+        case FighterDirection.UPRIGHT:
+        {
           magicBullet.m_speedX = lengthdir_x(50,m_fullDirection)/2;
           magicBullet.m_speedY = lengthdir_y(50,m_fullDirection)/2;
-          magicBullet.image_angle = 90;
+          deltaY = -80;
+          deltaX = 25;
+          magicBullet.phy_rotation = 90;
+          break;
+        }
+        case FighterDirection.UPLEFT:
+        {
+          magicBullet.m_speedX = lengthdir_x(50,m_fullDirection)/2;
+          magicBullet.m_speedY = lengthdir_y(50,m_fullDirection)/2;
+          deltaY = -80;
+          deltaX = -25;
+          magicBullet.phy_rotation = 90;
+          break;  
+        }
+        case FighterDirection.DOWN:
+        {
+          magicBullet.m_speedX = lengthdir_x(50,m_fullDirection)/2;
+          magicBullet.m_speedY = lengthdir_y(50,m_fullDirection)/2;
+          magicBullet.phy_rotation = 270;
+          deltaY = 7;
+          deltaX = -5;
+          break;
+        }
+        case FighterDirection.DOWNRIGHT:
+        {
+          magicBullet.m_speedX = lengthdir_x(50,m_fullDirection)/2;
+          magicBullet.m_speedY = lengthdir_y(50,m_fullDirection)/2;
+          magicBullet.phy_rotation = 270;
+          deltaY = 9;
+          deltaX = 0;
+          break;
+        }
+        case FighterDirection.DOWNLEFT:
+        {
+          magicBullet.m_speedX = lengthdir_x(50,m_fullDirection)/2;
+          magicBullet.m_speedY = lengthdir_y(50,m_fullDirection)/2;
+          magicBullet.phy_rotation = 270;
           deltaY = 7;
           deltaX = 0;
           break;
+        }
         case FighterDirection.LEFT:
+        {
           magicBullet.m_speedX = lengthdir_x(50,m_fullDirection)/2;
           magicBullet.m_speedY = lengthdir_y(50,m_fullDirection)/2;
           deltaX = -65;
           deltaY = -33;
           break;
+        }
         case FighterDirection.RIGHT:
+        {
           magicBullet.m_speedX = lengthdir_x(50,m_fullDirection)/2;
           magicBullet.m_speedY = lengthdir_y(50,m_fullDirection)/2;
-          magicBullet.image_angle = 180;
+          magicBullet.phy_rotation = 180;
           deltaX = 65;
           deltaY = -33;
           break;
+        }
+        default:
+         {
+          break;
+         }
         } 
         magicBullet.phy_position_x += deltaX;
         magicBullet.phy_position_y += deltaY;

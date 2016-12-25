@@ -201,6 +201,21 @@ if(keyboard_check_pressed(ord('J'))&&m_attackcd <= 0){
     case FighterDirection.RIGHT:
        sprite_index = sprattack_side;
        break;
+    case FighterDirection.UPRIGHT:
+        sprite_index = sprattack_back;
+        break;
+    case FighterDirection.UPLEFT:
+        sprite_index = sprattack_back;
+        break;
+    case FighterDirection.DOWNRIGHT:
+        sprite_index = sprattack_front;
+        break;
+    case FighterDirection.DOWNLEFT:
+        sprite_index = sprattack_front;
+        break;
+    default:
+        sprite_index = sprattack_front;
+       break;
     }
     m_isAttacking = true;
     image_index = 0;
