@@ -1,9 +1,11 @@
 event_inherited();
 
 m_playerid = 0;//0代表AI操控
+m_id = 2;
 m_hp = 1;
 m_name = "aliya";
-m_speed = 8;
+m_speedmax = 8;
+m_speed = m_speedmax;
 m_beingarrow = 0;
 m_attackcdmax = 0;
 m_skillcdmax = 0;
@@ -14,7 +16,11 @@ m_xuegaonumnow = 0;
 
 
 m_attachedHitbox = instance_create(x, y, obj_aliya_hitbox);
+m_passivearea1 = instance_create(x,y,obj_aliya_passive_area1);
+m_passivearea2 = instance_create(x,y,obj_aliya_passive_area2);
 m_attachedHitbox.father = id;//自身判定
+m_passivearea1.shooter = id;
+m_passivearea2.shooter = id;
 
 //用于操作中的spr
 sprroll = asset_get_index("spr_" + string(m_name) + "_roll");

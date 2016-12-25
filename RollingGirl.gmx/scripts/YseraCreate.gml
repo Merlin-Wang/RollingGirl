@@ -2,12 +2,14 @@
 event_inherited();
 
 m_playerid = 0;//暂时写在这里，当作主角
+m_id = 1;
 m_hp = 1;
 m_name = "ysera";
-m_speed = 8;
+m_speedmax = 8;
+m_speed = m_speedmax;
 m_beingarrow = 0;
 m_attackcdmax = 0;
-m_skillcdmax = 12;
+m_skillcdmax = 0;
 m_rollcdmax = 5;
 m_ultimatecdmax = 60;
 m_arrowStatus = ArrowStatus.InHand;

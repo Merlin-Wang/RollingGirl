@@ -28,6 +28,9 @@
             <string>event_inherited();
 m_speedX = 0;
 m_speedY = 0;
+m_accelerate = -0.55;
+originaldirection = 270;
+alarm[0]=20;
 
 </string>
           </argument>
@@ -53,6 +56,29 @@ m_speedY = 0;
             <kind>1</kind>
             <string>shooter.m_arrowStatus = ArrowStatus.InHand;
 shooter.m_isAttacking = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>shooter.m_arrowStatus = ArrowStatus.FlyingTo;
 </string>
           </argument>
         </arguments>
@@ -86,6 +112,59 @@ shooter.m_isAttacking = false;
 
 phy_position_x = phy_position_x + m_speedX;
 phy_position_y = phy_position_y + m_speedY;
+Xpercent = abs(m_speedX)/(abs(m_speedX)+abs(m_speedY));
+Ypercent = abs(m_speedY)/(abs(m_speedX)+abs(m_speedY))
+if(m_speedX &gt; 0)
+    {m_speedX += m_accelerate*Xpercent;
+    if(m_speedX &lt; 0)
+        {m_speedX = 0;}
+    }
+if(m_speedX &lt; 0)
+    {m_speedX -= m_accelerate*Xpercent;
+    if(m_speedX &gt; 0)
+        {m_speedX = 0;}
+    }
+
+if(m_speedY &gt; 0)
+    {m_speedY += m_accelerate*Ypercent;
+    if(m_speedY &lt; 0)
+        {m_speedY = 0;}
+    }
+if(m_speedY &lt; 0)
+    {m_speedY -= m_accelerate*Ypercent;
+    if(m_speedY &gt; 0)
+        {m_speedY = 0;}
+    }
+
+if(shooter.sprite_index == spr_ysera_skill &amp;&amp; shooter.m_arrowStatus != ArrowStatus.InHand){
+    if(shooter.image_index &gt; 2 &amp;&amp; shooter.m_fired == false){
+        shooter.phy_position_x = phy_position_x;
+        shooter.phy_position_y = phy_position_y + 33;
+        shooter.m_arrowStatus = ArrowStatus.InHand;
+        shooter.m_fired = true;
+        instance_destroy();
+    }
+    
+}
+
+if(shooter.sprite_index == spr_ysera_attack_front || shooter.sprite_index == spr_ysera_attack_back ||shooter.sprite_index == spr_ysera_attack_side){
+    if(shooter.m_arrowStatus != ArrowStatus.InHand){
+        deltaX = shooter.phy_position_x - phy_position_x;
+         deltaY = shooter.phy_position_y  - 33 - phy_position_y;
+    
+         m_curSpeedX = 7 * deltaX / sqrt(deltaX * deltaX + deltaY * deltaY);
+         m_curSpeedY = 7 * deltaY / sqrt(deltaX * deltaX + deltaY * deltaY);
+    
+         m_speedX = 0;
+         m_speedY = 0;
+         phy_position_x = phy_position_x + m_curSpeedX;
+         phy_position_y = phy_position_y + m_curSpeedY;
+
+         shooter.m_arrowStatus = ArrowStatus.FlyingBack;
+         shooter.m_fired = true;
+    }
+    
+}
 </string>
           </argument>
         </arguments>
@@ -108,33 +187,10 @@ phy_position_y = phy_position_y + m_speedY;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(shooter.m_arrowStatus == ArrowStatus.FlyingBack)
-{
-    instance_destroy();
+            <string>if(shooter.m_arrowStatus != ArrowStatus.InHand){
+instance_destroy();
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_scene_hitbox">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>event_inherited();
+
 </string>
           </argument>
         </arguments>
@@ -157,14 +213,13 @@ phy_position_y = phy_position_y + m_speedY;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
-
+            <string>i = 1;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="75">
+    <event eventtype="7" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -181,50 +236,7 @@ phy_position_y = phy_position_y + m_speedY;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(shooter.m_arrowStatus != ArrowStatus.InHand &amp;&amp; shooter.m_skillcd&lt;=0)
-{
-    shooter.phy_position_x = phy_position_x;
-    shooter.phy_position_y = phy_position_y + 33;
-    shooter.m_arrowStatus = ArrowStatus.InHand;
-    instance_destroy();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="74">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(true)   //召回箭支
-{
-    deltaX = shooter.phy_position_x - phy_position_x;
-    deltaY = shooter.phy_position_y  - 33 - phy_position_y;
-    
-    m_curSpeedX = 10 * deltaX / sqrt(deltaX * deltaX + deltaY * deltaY);
-    m_curSpeedY = 10 * deltaY / sqrt(deltaX * deltaX + deltaY * deltaY);
-    
-    m_speedX = 0;
-    m_speedY = 0;
-    phy_position_x = phy_position_x + m_curSpeedX;
-    phy_position_y = phy_position_y + m_curSpeedY;
-
-    shooter.m_arrowStatus = ArrowStatus.FlyingBack;
-}
+            <string>i = 1;
 </string>
           </argument>
         </arguments>

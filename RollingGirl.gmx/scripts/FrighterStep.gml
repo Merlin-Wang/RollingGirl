@@ -65,7 +65,15 @@ if(m_speedX==0&&m_speedY==0)
     {
     m_undercontrol = true;
     }
+}
 
 
-
+//这里处理被Aliya减速的状态
+if(position_meeting(x, y, obj_aliya_passive_area2)&&m_id!=2)
+{
+ m_speed = m_speedmax - 2;
+}
+if(position_meeting(x, y, obj_aliya_passive_area1)&&m_id!=2)
+{
+ m_speed = m_speedmax - 4;
 }
