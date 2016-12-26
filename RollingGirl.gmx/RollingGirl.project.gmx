@@ -89,6 +89,11 @@
       <script>scripts\AliyaSkill.gml</script>
       <script>scripts\AliyaUltimate.gml</script>
       <script>scripts\AliyaRoll.gml</script>
+      <scripts name="AI">
+        <script>scripts\AliyaAICare.gml</script>
+        <script>scripts\AliyaAIBold.gml</script>
+        <script>scripts\AliyaAIRemote.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Devil">
       <script>scripts\DevilUpdateRetreat.gml</script>
@@ -169,9 +174,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_pve1</room>
     <room>rooms\room_select</room>
     <room>rooms\room_battle</room>
-    <room>rooms\room_pve1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

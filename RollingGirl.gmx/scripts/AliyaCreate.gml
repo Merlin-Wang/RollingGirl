@@ -14,6 +14,13 @@ m_ultimatecdmax = 60;
 m_xuegaonummax = 5;
 m_xuegaonumnow = 0;
 
+m_clever = 6;   //越高AI中越不容易犯错
+enum AliyaState{   //设置状态机
+    ALIYA_CARE,    //谨慎模式
+    ALIYA_BOLD,    //大胆模式
+    ALIYA_REMOTE   //远程模式
+}
+m_aliyastate = AliyaState.ALIYA_CARE;
 
 m_attachedHitbox = instance_create(x, y, obj_aliya_hitbox);
 m_passivearea1 = instance_create(x,y,obj_aliya_passive_area1);

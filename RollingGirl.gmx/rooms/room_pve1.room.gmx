@@ -67,7 +67,6 @@
     <instance objName="obj_pool" x="640" y="352" name="inst_1A77A665" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="736" y="160" name="inst_2A989A24" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ysera" x="576" y="512" name="inst_53684256" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_devil" x="928" y="704" name="inst_33B11028" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_director_pve1" x="0" y="0" name="inst_3E02CC9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_aliya" x="160" y="352" name="inst_00A2F12F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

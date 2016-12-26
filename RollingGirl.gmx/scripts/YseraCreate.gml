@@ -1,7 +1,7 @@
 
 event_inherited();
 
-m_playerid = 0;//暂时写在这里，当作主角
+m_playerid = 1;//暂时写在这里，当作主角
 m_id = 1;
 m_hp = 1;
 m_name = "ysera";

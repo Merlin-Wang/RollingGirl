@@ -48,6 +48,3 @@ YsearUltimate();
 //翻滚
 YseraRoll();
 
-
-show_debug_message(m_playerDirection);
-show_debug_message(m_fullDirection);

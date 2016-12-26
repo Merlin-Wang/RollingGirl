@@ -14,14 +14,25 @@ if(m_hp <= 0){   //死了播死亡动画
 if(m_playerid>0&&m_undercontrol==true){//人手操
 
     FighterStepKeyboard();
-    FighterStepGamepad();
+    //FighterStepGamepad();
    
 }
 
 else
 {
 //状态机代码
-
+if(m_aliyastate == AliyaState.ALIYA_CARE)
+    {
+    AliyaAICare();
+    }
+else if(m_aliyastate == AliyaState.ALIYA_BOLD)
+    {
+    AliyaAIBold();
+    }
+else if(m_aliyastate == AliyaState.ALIYA_REMOTE)
+    {
+    AliyaAIRemote();
+    }
 }
 
 
