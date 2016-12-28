@@ -174,9 +174,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_pve1</room>
     <room>rooms\room_select</room>
     <room>rooms\room_battle</room>
+    <room>rooms\room_pve1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
