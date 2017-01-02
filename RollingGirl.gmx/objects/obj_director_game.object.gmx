@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_aliya.m_playerid = 0;
-obj_ysera.m_playerid = global.playerid;
+            <string>GameStart();
 </string>
           </argument>
         </arguments>

@@ -1,4 +1,4 @@
-//如何移动
+/*如何移动
 if(m_isAttacking == false && m_isInSkill == false && m_isInUltimate == false && m_isRolling == false){
 var player = instance_find(obj_ysera,0);
 var deltaX = player.x - x-200;
@@ -29,8 +29,12 @@ var deltaY = player.y - y-200;
     else if(deltaX < 0){
         image_xscale = 1;
     }
-    if(deltaX > 0 ||deltaY > 0)
+    if(deltaX > 0.001||deltaX < -0.001)
     {sprite_index = spr_aliya_walk_side;}
+    else if(deltaY > 0.001)
+    {sprite_index = spr_aliya_walk_front;}
+    else if(deltaY < -0.001)
+    {sprite_index = spr_aliya_walk_back;}
     else
     {sprite_index = spr_aliya_idle;}
 }

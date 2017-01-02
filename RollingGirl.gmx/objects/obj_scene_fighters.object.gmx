@@ -71,7 +71,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>i = 1;
+</string>
           </argument>
         </arguments>
       </action>

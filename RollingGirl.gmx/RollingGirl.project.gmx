@@ -3,6 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="10" name="datafiles">
+    <datafile>
+      <name>CHSText.ini</name>
+      <exists>-1</exists>
+      <size>175</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>CHSText.ini</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -90,6 +109,7 @@
       <script>scripts\AliyaUltimate.gml</script>
       <script>scripts\AliyaRoll.gml</script>
       <scripts name="AI">
+        <script>scripts\AliyaAIPerform.gml</script>
         <script>scripts\AliyaAICare.gml</script>
         <script>scripts\AliyaAIBold.gml</script>
         <script>scripts\AliyaAIRemote.gml</script>
@@ -110,7 +130,12 @@
     <script>scripts\FighterStepGamepad.gml</script>
     <script>scripts\FrighterStep.gml</script>
     <script>scripts\FrighterAniEnd.gml</script>
+    <script>scripts\GameStart.gml</script>
+    <script>scripts\TextRead.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_scene_base</object>
     <object>objects\obj_scene_static</object>
@@ -125,9 +150,11 @@
     <object>objects\obj_scene_skill</object>
     <object>objects\obj_scene_ui</object>
     <objects name="Director">
+      <object>objects\obj_director_dreamland</object>
       <object>objects\obj_director_select</object>
       <object>objects\obj_director_battle</object>
       <object>objects\obj_director_pve1</object>
+      <object>objects\obj_director_game</object>
     </objects>
     <objects name="Aliya">
       <object>objects\obj_aliya</object>
@@ -165,6 +192,7 @@
       <object>objects\obj_aliya_hitbox</object>
     </objects>
     <objects name="UI">
+      <object>objects\obj_ui_popup</object>
       <objects name="Select">
         <object>objects\obj_ui_select_character1name</object>
         <object>objects\obj_ui_select_character2name</object>
@@ -174,6 +202,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_dreamland</room>
     <room>rooms\room_select</room>
     <room>rooms\room_battle</room>
     <room>rooms\room_pve1</room>

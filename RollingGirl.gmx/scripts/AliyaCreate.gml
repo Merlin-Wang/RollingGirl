@@ -18,7 +18,8 @@ m_clever = 6;   //越高AI中越不容易犯错
 enum AliyaState{   //设置状态机
     ALIYA_CARE,    //谨慎模式
     ALIYA_BOLD,    //大胆模式
-    ALIYA_REMOTE   //远程模式
+    ALIYA_REMOTE,   //远程模式
+    ALIYA_PERFORM
 }
 m_aliyastate = AliyaState.ALIYA_CARE;
 
@@ -42,3 +43,8 @@ sprwalk_side = asset_get_index("spr_" + string(m_name) + "_walk_side");
 sprultimate = asset_get_index("spr_" + string(m_name) + "_ultimate");
 sprhitbox = asset_get_index("obj_" + string(m_name) + "_hitbox");
 
+
+//读入台词
+TextRead(); 
+m_voice1 = ini_read_string(string(m_name), "StrVoice1", 0);
+ini_close();

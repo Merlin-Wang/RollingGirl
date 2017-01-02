@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y;
+            <string>event_inherited();
+depth = -y;
+
 </string>
           </argument>
         </arguments>

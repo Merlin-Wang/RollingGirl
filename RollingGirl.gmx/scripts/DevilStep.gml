@@ -1,4 +1,4 @@
-image_speed = 0.25;
+image_speed = 0.15;
 
 if(m_isDead)  //死亡则退出
     return 0;

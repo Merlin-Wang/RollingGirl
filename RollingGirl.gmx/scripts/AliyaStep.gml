@@ -1,4 +1,4 @@
-image_speed = 0.25  //调整动画速度
+image_speed = 0.15  //调整动画速度
 
 event_inherited();
 
@@ -32,6 +32,10 @@ else if(m_aliyastate == AliyaState.ALIYA_BOLD)
 else if(m_aliyastate == AliyaState.ALIYA_REMOTE)
     {
     AliyaAIRemote();
+    }
+else if(m_aliyastate == AliyaState.ALIYA_PERFORM)
+    {
+    AliyaAIPerform();
     }
 }
 

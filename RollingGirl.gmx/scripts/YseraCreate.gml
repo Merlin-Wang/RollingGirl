@@ -1,7 +1,7 @@
 
 event_inherited();
 
-m_playerid = 1;//暂时写在这里，当作主角
+m_playerid = 0;//暂时写在这里，当作主角
 m_id = 1;
 m_hp = 1;
 m_name = "ysera";
@@ -35,5 +35,8 @@ sprwalk_side = asset_get_index("spr_" + string(m_name) + "_walk_side");
 sprultimate = asset_get_index("spr_" + string(m_name) + "_ultimate");
 sprhitbox = asset_get_index("obj_" + string(m_name) + "_hitbox");
 
-
+//读入台词
+TextRead(); 
+m_voice1 = ini_read_string(string(m_name), "StrVoice1", 0);
+ini_close();
 

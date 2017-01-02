@@ -29,17 +29,17 @@
 {
 case 1:
     mainrole = instance_create(720, 450, obj_ysera);
-    mainrole.m_playerid = 1; 
+    mainrole.m_playerid = global.playerid; 
     global.charactername = "ysera";
     break;
 case 2:
     mainrole = instance_create(720, 450, obj_aliya);
-    mainrole.m_playerid = 1; 
+    mainrole.m_playerid = global.playerid; 
     global.charactername = "aliya";
     break;
 default:
     mainrole = instance_create(720, 450, obj_ysera);
-    mainrole.m_playerid = 1; 
+    mainrole.m_playerid = global.playerid; 
 
 
 }    
