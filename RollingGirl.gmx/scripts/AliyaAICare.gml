@@ -1,8 +1,13 @@
-/*如何移动
+//如何移动
 if(m_isAttacking == false && m_isInSkill == false && m_isInUltimate == false && m_isRolling == false){
 var player = instance_find(obj_ysera,0);
-var deltaX = player.x - x-200;
-var deltaY = player.y - y-200;
+if(m_xuegaonumnow<5) //距离够近了就放雪糕
+{
+var maxdistance = 200;
+var deltaX = player.x - x;
+var deltaY = player.y - y;
+distance = sqrt(power(deltaX,2)+power(deltaY,2));
+show_debug_message(distance);
     if(deltaX > m_speed){
         phy_position_x += m_speed;
     }
@@ -35,11 +40,37 @@ var deltaY = player.y - y-200;
     {sprite_index = spr_aliya_walk_front;}
     else if(deltaY < -0.001)
     {sprite_index = spr_aliya_walk_back;}
-    else
-    {sprite_index = spr_aliya_idle;}
+    
+    if(distance<=maxdistance)
+        {sprite_index = sprskill;
+        lastx = x;
+        lasty = y;
+        tmpang = point_direction(lastx,lasty,player.x,player.y);
+        tmpang = tmpang - 90;
+        m_isInSkill = true;
+        image_index = 0;
+        m_fired = false;
+     }    
 }
-//如何放置雪糕
+else if((m_xuegaonummax-m_xuegaonumnow)==4)//放了1个-留给后面处理
+    {
+    motion_add(tmpang, m_speed);
+    sprite_index = sprskill;
+    m_isInSkill = true;
+    image_index = 0;
+    m_fired = false;
+    
+    
+    }
 
+else  //放完了
+    {
+    
+    
+    
+    }
+}
+    
 
 
 //什么时候踢雪糕
