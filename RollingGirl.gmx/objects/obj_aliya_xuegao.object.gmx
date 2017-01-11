@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 shooter = noone;
-alarm[0]=250;
+alarm[0]=360;
 m_speedY = 0;
 m_speedX = 0;
 m_accelerate = -0.2;
@@ -59,7 +59,6 @@ m_accelerate = -0.2;
     }
 var boom = instance_create(x,y,obj_aliya_xuegaoboom);
 boom.shooter = shooter;    
-
 instance_destroy();
 
 </string>

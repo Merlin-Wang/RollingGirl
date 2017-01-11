@@ -29,7 +29,6 @@
 TextRead(); 
 m_desc = ini_read_string(string(m_name), "StrDesc", 0);
 ini_close();
-show_debug_message(m_desc);
 </string>
           </argument>
         </arguments>
