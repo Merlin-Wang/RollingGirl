@@ -5,6 +5,6 @@ if(m_isAttacking&&m_xuegaonumnow<m_xuegaonummax && m_fired == false){
        var kickarea = instance_create(x+deltax,y+deltay,obj_aliya_kick_area);
        kickarea.shooter = id;
        m_fired = true;
-       
+       m_isAttacking = false;
     }
 }

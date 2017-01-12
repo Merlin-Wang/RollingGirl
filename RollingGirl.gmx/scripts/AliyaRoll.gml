@@ -18,5 +18,12 @@ if(sprite_index == spr_aliya_roll){
             //motion_set(m_playerDirection,m_rollspeed);
             }
             m_rollcount++;
+            if(m_rollcount>=m_rollstepmax)
+                {
+                m_fired = true;
+                m_rollcount = 0;
+                }
     }
+    
+    
 }

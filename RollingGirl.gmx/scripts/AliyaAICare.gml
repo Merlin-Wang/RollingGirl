@@ -1,16 +1,15 @@
 //如何移动
 if(m_isAttacking == false && m_isInSkill == false && m_isInUltimate == false && m_isRolling == false){
-var player = instance_find(obj_ysera,0);
+player = instance_find(obj_ysera,0);
 
-if(m_xuegaonumnow==0) //距离够近了就放雪糕
+if(m_xuegaonumnow==0||m_tracking) //距离够近了就放雪糕
 {
-//show_debug_message(1);
-var maxdistance = 170;
+maxdistance = 170;
 betweentimemax = 20;
 betweentime = 0;
 thisturnover = 0;
-var deltaX = player.x - x;
-var deltaY = player.y - y;
+deltaX = player.x - x;
+deltaY = player.y - y;
 distance = sqrt(power(deltaX,2)+power(deltaY,2));
     if(deltaX > m_speed){
         phy_position_x += m_speed;
@@ -46,14 +45,16 @@ distance = sqrt(power(deltaX,2)+power(deltaY,2));
     {sprite_index = spr_aliya_walk_back;}
     
     if(distance<=maxdistance)
-        {sprite_index = sprskill;
+        {
+        m_fired = false;
+        m_isInSkill = true;
+        sprite_index = sprskill;
         lastx = x;
         lasty = y;
         tmpang = point_direction(lastx,lasty,player.x,player.y);
         tmpang = tmpang - 120;
-        m_isInSkill = true;
         image_index = 0;
-        m_fired = false;
+        m_tracking = 0;
      }    
 }
 else if((m_xuegaonummax-m_xuegaonumnow)>0&&thisturnover==0)//放了1个-留给后面处理
@@ -66,14 +67,14 @@ else if((m_xuegaonummax-m_xuegaonumnow)>0&&thisturnover==0)//放了1个-留给�
     betweentime++;
     if(betweentime>=betweentimemax)
     {
-    sprite_index = sprskill;
-    m_isInSkill = true;
-    image_index = 0;
     m_fired = false;
+    m_isInSkill = true;
+    sprite_index = sprskill;
+    image_index = 0;
     lastx = x;
     lasty = y;
     tmpang = point_direction(lastx,lasty,player.x,player.y);
-    tmpang = tmpang - 90;
+    tmpang = tmpang - 120;
     betweentime = 0;
     if((m_xuegaonummax-m_xuegaonumnow)==1)
         {
@@ -81,16 +82,28 @@ else if((m_xuegaonummax-m_xuegaonumnow)>0&&thisturnover==0)//放了1个-留给�
         targetxuegaoy = y;
         }
     }
-    
+    deltaX = player.x - x;
+    deltaY = player.y - y;
+    distance = sqrt(power(deltaX,2)+power(deltaY,2));
+    if(distance>300)
+        {
+        m_tracking = 1;
+        }
+    rantime = 50;
     }
 
 else  //放完了
     {
-    
-    
-    
+    if(rantime>=30)
+    {
+    ranX = cos(random(360))*m_speed;
+    ranY = sin(random(360))*m_speed;
+    rantime = 0;
+    }
+    phy_position_x += ranX;
+    phy_position_y += ranY;
     thisturnover = 1;
-    
+    rantime++;
     
     }
 }
@@ -103,11 +116,32 @@ else  //放完了
 
 
 //什么时候翻滚
+if(instance_exists(obj_ysera_magic_bullet))
+{
+var bullet = instance_find(obj_ysera_magic_bullet,0);
+var avoidX = bullet.x - x;
+var avoidY = bullet.y - y;
+bulletdistancemax = 100;
+bulletdistance = sqrt(power(avoidX,2)+power(avoidY,2));
+if(bulletdistance <= bulletdistancemax && m_rollcd <= 0 &&!m_isRolling)
+    {
+        m_fired = false;
+        m_isRolling = true;
+    if(sprroll>-1)
+        {
+            m_fullDirection = random(360);
+            sprite_index = sprroll;
+        }
+        image_index = 0;
+        
+        m_rollcount = 0;
+        m_tracking = 1;
+        m_isInSkill = false;
+    }
 
-
-
+}
 //什么时候切换到远程模式
-
+show_debug_message(m_rollcd);
 
 
 //什么时候切换到大胆模式

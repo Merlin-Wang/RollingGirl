@@ -13,6 +13,7 @@ m_rollcdmax = 5;
 m_ultimatecdmax = 60;
 m_xuegaonummax = 5;
 m_xuegaonumnow = 0;
+m_tracking = 0;
 
 m_clever = 6;   //越高AI中越不容易犯错
 enum AliyaState{   //设置状态机
